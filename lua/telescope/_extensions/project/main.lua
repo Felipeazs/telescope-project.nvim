@@ -41,7 +41,7 @@ end
 M.project = function(opts)
     opts = vim.tbl_deep_extend("force", theme_opts, opts or {})
     pickers.new(opts, {
-        prompt_title = 'Select a project',
+        prompt_title = 'Main Projects',
         results_title = 'Projects',
         finder = _finders.project_finder(opts, _utils.get_projects(order_by)),
         sorter = conf.file_sorter(opts),
